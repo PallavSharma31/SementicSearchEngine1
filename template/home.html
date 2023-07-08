@@ -10,9 +10,8 @@
   <style>
         body{
 
-    background: #d1d5db;
+    background: #7cb3d85e;
 }
-
 .height{
 
     height: 100vh;
@@ -71,7 +70,7 @@
 <!--       {{a}}-->
 <!--  {% endfor %}-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Sementic Search Engine</a>
+  <a class="navbar-brand" href="#">Semantic Search Engine</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -82,16 +81,24 @@
         <a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0" method="post" action="{% url 'homepage' %}" autocomplete="off">
+    <span class="navbar-text mx-2" style="padding-right:20px">
+      Welcome, {{ request.user.username }}!
+    </span>
+    <form style="padding-right:10px" class="form-inline my-2 my-lg-0" method="post" action="{% url 'search' %}" autocomplete="off">
       {% csrf_token %}
-      <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Search</button>
+    </form>
+        <form class="form-inline my-2 my-lg-0" method="post" action="{% url 'logout' %}" autocomplete="off">
+      {% csrf_token %}
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
     </form>
   </div>
 </nav>
+
 <!--{% for l in list %}-->
 <!-- {{l.name}}-->
 <!--{% endfor %}-->
+<h2 style="text-align:center">Search Results for {{search}}</h2>
 <div class="container" style="margin-top:10px">
   <div class="row" style="margin-top:10px">
     {% for item in list %}
@@ -100,7 +107,7 @@
         <img src="{{item.img}}" class="card-img-top " alt="Image" style="height:200px;width:100px;margin:auto">
         <div class="card-body" style="text-align:center">
           <h5 class="card-title" style="text-align:center">{{item.name|truncatechars:20}}</h5>
-          <p class="card-text" style="text-align:center">{{item.sim}}</p>
+          <p class="card-text" style="text-align:center">Similarity Score: {{item.sim|floatformat:3 }}</p>
           <a href="{{item.link}}" class="btn btn-primary" >View</a>
         </div>
       </div>
