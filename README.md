@@ -1,6 +1,8 @@
 # Sementic-Search-Engine
 Sementic Search Engine For Ecommerce .
 
+<img width="947" alt="search_page" src="https://github.com/pallav31sharma/Sementic-Search-Engine/assets/133598959/65503847-ec23-4108-8cf8-2379023a44f2">
+
 ## Installation
 
 To set up the Semantic Search Engine project, follow these steps:
