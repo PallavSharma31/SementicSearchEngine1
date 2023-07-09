@@ -2,7 +2,8 @@
 
 This Django project, named Semantic Search Engine, is a powerful search engine designed specifically for e-commerce websites. It enables users to input their queries and retrieves the most relevant products from a database based on semantic similarity scores. By leveraging natural language processing techniques, the search engine aims to provide accurate and intuitive search results for enhanced user experience.
 
-<img width="947" alt="search_page" src="https://github.com/pallav31sharma/Sementic-Search-Engine/assets/133598959/65503847-ec23-4108-8cf8-2379023a44f2">
+![intro_gif](https://github.com/pallav31sharma/Sementic-Search-Engine/assets/133598959/4e446073-f8a5-4a1c-8815-4efa0003ba08)
+
 
 ## Installation
 
