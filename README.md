@@ -30,3 +30,4 @@ To set up the Semantic Search Engine project, follow these steps:
 
 ## Description    
    
+This project makes use of the Sentence Transformer Model to convert the names of all the products into embeddings, the user query is also converted into embeddings so that the similarity score can be found between the user query and all products in the database, then the top 20 product is found out from the database on the basis of highest similarity score with the query.
